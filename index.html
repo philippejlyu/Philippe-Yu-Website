@@ -7,7 +7,8 @@
     <meta name="description" content="Philippe Yu is a Senior Software Developer at AMD in Markham, Ontario, focused on kernel-mode GPU drivers, Crash Defender, and agentic diagnostics.">
     <meta name="author" content="Philippe Yu">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#f2efe8" id="theme-color">
+    <meta name="theme-color" content="#f2efe8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#131411" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://philippeyu.com/">
@@ -35,24 +36,13 @@
     <link rel="preload" href="fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
     <script>
-      (function () {
-        var root = document.documentElement;
-        root.classList.add("js");
-        var theme = null;
-        try { theme = localStorage.getItem("theme"); } catch (e) {}
-        if (theme === "light" || theme === "dark") root.setAttribute("data-theme", theme);
-        var dark = theme === "dark" || (theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-        var meta = document.getElementById("theme-color");
-        if (meta) meta.setAttribute("content", dark ? "#131411" : "#f2efe8");
-      })();
+      document.documentElement.classList.add("js");
     </script>
     <style>
       :root { color-scheme: light; background: #f2efe8; }
       @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) { color-scheme: dark; background: #131411; }
+        :root { color-scheme: dark; background: #131411; }
       }
-      :root[data-theme="dark"] { color-scheme: dark; background: #131411; }
-      :root[data-theme="light"] { color-scheme: light; background: #f2efe8; }
     </style>
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -111,10 +101,6 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <button type="button" class="theme-toggle" aria-pressed="false">
-          <span class="when-light">Theme: Light</span>
-          <span class="when-dark">Theme: Dark</span>
-        </button>
       </div>
     </header>
 
@@ -134,14 +120,13 @@
                 <a class="button button-primary" href="https://www.linkedin.com/in/~py" rel="me noopener noreferrer" target="_blank">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
                 <a class="button button-secondary" href="https://github.com/philippejlyu" rel="me noopener noreferrer" target="_blank">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
               </div>
-              <p class="availability"><span class="status-dot" aria-hidden="true"></span> Open to opportunities</p>
             </div>
             <aside class="now" aria-label="Current role">
               <p class="now-kicker">Now</p>
               <p class="now-title">Senior Software Developer</p>
               <p class="now-meta"><time datetime="2025-07">Jul 2025</time> to Present</p>
               <p class="now-meta">AMD, Markham, Ontario, Canada</p>
-              <p class="now-focus"><span class="now-label">Focus</span> AMD Crash Defender and related infrastructure inside the AMD graphics driver, including <code>amdfendr.sys</code>.</p>
+              <p class="now-focus"><span class="now-label">Focus</span> Windows kernel-mode GPU driver reliability and crash diagnostics at scale, and agentic AI systems that automate root-cause analysis.</p>
             </aside>
           </div>
           <ul class="stats" role="list">

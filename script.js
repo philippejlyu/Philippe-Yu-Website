@@ -1,42 +1,6 @@
 (function () {
-  var root = document.documentElement;
-  var themeButton = document.querySelector(".theme-toggle");
   var navToggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
-  var themeMeta = document.getElementById("theme-color");
-  var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-  function currentTheme() {
-    var set = root.getAttribute("data-theme");
-    if (set === "light" || set === "dark") return set;
-    return darkQuery.matches ? "dark" : "light";
-  }
-
-  function applyChrome(theme) {
-    if (themeButton) {
-      themeButton.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-    }
-    if (themeMeta) {
-      themeMeta.setAttribute("content", theme === "dark" ? "#131411" : "#f2efe8");
-    }
-  }
-
-  if (themeButton) {
-    themeButton.addEventListener("click", function () {
-      var next = currentTheme() === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      try {
-        localStorage.setItem("theme", next);
-      } catch (err) {}
-      applyChrome(next);
-    });
-  }
-
-  applyChrome(currentTheme());
-
-  darkQuery.addEventListener("change", function () {
-    if (!root.getAttribute("data-theme")) applyChrome(currentTheme());
-  });
 
   function setNav(open) {
     if (!nav || !navToggle) return;
