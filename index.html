@@ -107,128 +107,97 @@
     <main id="content" tabindex="-1">
       <section class="hero" aria-labelledby="hero-heading">
         <div class="wrap">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <p class="kicker">Systems and software engineer</p>
-              <h1 id="hero-heading">
-                <span class="name">Philippe Yu</span>
-                <span class="role">Senior Software Developer</span>
-              </h1>
-              <p class="org">AMD, Markham, Ontario, Canada</p>
-              <p class="pitch">Kernel-mode GPU graphics drivers and agentic systems for crash diagnostics.</p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="https://www.linkedin.com/in/~py" rel="me noopener noreferrer" target="_blank">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
-                <a class="button button-secondary" href="https://github.com/philippejlyu" rel="me noopener noreferrer" target="_blank">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-              </div>
+          <p class="kicker">Systems and software engineer</p>
+          <h1 id="hero-heading">
+            <span class="name">Philippe Yu</span>
+            <span class="hero-role">Senior Software Developer <span class="at">at AMD</span></span>
+          </h1>
+          <div class="hero-bar">
+            <div class="hero-facts">
+              <p class="org">Markham, Ontario, Canada</p>
+              <p class="tenure"><time datetime="2025-07">Jul 2025</time> to Present</p>
             </div>
-            <aside class="now" aria-label="Current role">
-              <p class="now-kicker">Now</p>
-              <p class="now-title">Senior Software Developer</p>
-              <p class="now-meta"><time datetime="2025-07">Jul 2025</time> to Present</p>
-              <p class="now-meta">AMD, Markham, Ontario, Canada</p>
-              <p class="now-focus"><span class="now-label">Focus</span> Windows kernel-mode GPU driver reliability and crash diagnostics at scale, and agentic AI systems that automate root-cause analysis.</p>
-            </aside>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://www.linkedin.com/in/~py" rel="me noopener noreferrer" target="_blank">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+              <a class="button button-secondary" href="https://github.com/philippejlyu" rel="me noopener noreferrer" target="_blank">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
           </div>
-          <ul class="stats" role="list">
-            <li>
-              <p class="stat-value">$2M</p>
-              <p class="stat-label">Annual savings from AI workflow adoption across engineering units, reducing mean time to resolution.</p>
-            </li>
-            <li>
-              <p class="stat-value">Up to 80%</p>
-              <p class="stat-label">Accuracy increase from debugging features integrated with internal crash telemetry, during the AMD co-op.</p>
-            </li>
-            <li>
-              <p class="stat-value"><a href="#patent">US11994939B2</a></p>
-              <p class="stat-label">Patent issued May 28, 2024.</p>
-            </li>
-          </ul>
         </div>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">01</span>
-            <h2 id="about-heading">About</h2>
-          </div>
+          <h2 id="about-heading">About</h2>
           <div class="prose">
-            <p>I'm a systems and software engineer at AMD in Markham, Ontario, focused on kernel work in the GPU graphics driver and on architecting agentic systems. Recent work includes AMD Crash Defender and related infrastructure inside the AMD graphics driver, including <code>amdfendr.sys</code>.</p>
-            <p>I studied Computer Science at the University of Toronto from 2018 to 2023.</p>
+            <p>I work on Windows kernel-mode GPU graphics drivers at AMD in Markham. The heart of that work is crash and fault diagnostics and driver reliability: getting to the cause of a failure, and making the driver more stable. Alongside it, I architect multi-agent systems that use retrieval-augmented generation and tool-calling to automate root-cause analysis, generate high-fidelity debug reports, and offer real-time code-fix suggestions.</p>
+            <p>Kernel-mode drivers, crash diagnostics, and those agentic systems are where I go deep. I led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender. I spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings, and collaborated with Microsoft on new developer tool features for Windows as part of GDC 2026.</p>
           </div>
         </div>
       </section>
 
       <section id="experience" class="section" aria-labelledby="experience-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">02</span>
-            <h2 id="experience-heading">Experience</h2>
+          <h2 id="experience-heading">Experience</h2>
+          <div class="roles">
+            <article class="role">
+              <header class="role-head">
+                <div class="role-title">
+                  <h3>Senior Software Developer</h3>
+                  <p class="when"><time datetime="2025-07">Jul 2025</time> to Present</p>
+                </div>
+                <div class="role-where">
+                  <p class="role-org">AMD</p>
+                  <p class="role-place">Markham, Ontario, Canada</p>
+                </div>
+              </header>
+              <p class="promotion">Promoted from Software Development Engineer 2, <time datetime="2023-06">Jun 2023</time> to <time datetime="2025-07">Jul 2025</time>.</p>
+              <ul class="role-list" role="list">
+                <li>Architected an extensible multi-agent diagnostic system using RAG and tool-calling to automate root-cause analysis, generate high-fidelity debug reports, and provide real-time code-fix suggestions.</li>
+                <li>Spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings.</li>
+                <li>Led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender.</li>
+                <li>Collaborated with Microsoft on new developer tool features for Windows as part of <a href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">GDC 2026</a><span class="sr-only"> (opens in a new tab)</span>.</li>
+              </ul>
+            </article>
+            <article class="role">
+              <header class="role-head">
+                <div class="role-title">
+                  <h3>Software Developer, PEY Co-op</h3>
+                  <p class="when"><time datetime="2021-05">May 2021</time> to <time datetime="2022-08">Aug 2022</time></p>
+                </div>
+                <div class="role-where">
+                  <p class="role-org">AMD</p>
+                </div>
+              </header>
+              <p class="role-note">16-month Professional Experience Year co-op</p>
+              <ul class="role-list" role="list">
+                <li>Led development of new debugging tools used by OEMs (original equipment manufacturers) to interact with the AMDLog driver.</li>
+                <li>Integrated features with internal crash telemetry data, increasing accuracy by up to 80%.</li>
+                <li>Resolved complex issues in the kernel-mode graphics driver on the Fault Management team.</li>
+                <li>Managed critical testing infrastructure.</li>
+                <li>One US patent filing.</li>
+              </ul>
+            </article>
           </div>
-          <p class="lede">Roles at AMD, most recent first.</p>
-          <ol class="timeline" role="list">
-            <li>
-              <p class="when"><time datetime="2025-07">Jul 2025</time> to Present</p>
-              <article>
-                <h3>Senior Software Developer</h3>
-                <p class="where">AMD, Markham, Ontario, Canada</p>
-                <ul class="role-list" role="list">
-                  <li>Architected an extensible multi-agent diagnostic system using RAG and tool-calling to automate root-cause analysis, generate high-fidelity debug reports, and provide real-time code-fix suggestions.</li>
-                  <li>Spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings.</li>
-                  <li>Led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender.</li>
-                  <li>Collaborated with Microsoft on new developer tool features for Windows as part of <a href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">GDC 2026</a><span class="sr-only"> (opens in a new tab)</span>.</li>
-                </ul>
-              </article>
-            </li>
-            <li>
-              <p class="when"><time datetime="2023-06">Jun 2023</time> to <time datetime="2025-07">Jul 2025</time></p>
-              <article>
-                <h3>Software Development Engineer 2</h3>
-                <p class="where">AMD</p>
-              </article>
-            </li>
-            <li>
-              <p class="when"><time datetime="2021-05">May 2021</time> to <time datetime="2022-08">Aug 2022</time></p>
-              <article>
-                <h3>Software Developer Co-op</h3>
-                <p class="where">AMD</p>
-                <p class="role-note">16-month PEY (Professional Experience Year) internship</p>
-                <ul class="role-list" role="list">
-                  <li>Led development of new debugging tools used by OEMs (original equipment manufacturers) to interact with the AMDLog driver.</li>
-                  <li>Integrated features with internal crash telemetry data, increasing accuracy by up to 80%.</li>
-                  <li>Resolved complex issues in the kernel-mode graphics driver on the Fault Management team.</li>
-                  <li>Managed critical testing infrastructure.</li>
-                  <li>One US patent filing.</li>
-                </ul>
-              </article>
-            </li>
-          </ol>
         </div>
       </section>
 
       <section id="work" class="section" aria-labelledby="work-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">03</span>
-            <h2 id="work-heading">Featured work</h2>
-          </div>
+          <h2 id="work-heading">Featured work</h2>
           <p class="lede">From the senior role at AMD.</p>
           <div class="work-grid">
             <article class="work-card">
-              <p class="work-index" aria-hidden="true">01</p>
               <h3>AMD Crash Defender</h3>
               <p>Led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender. Current work is Crash Defender and related infrastructure inside the AMD graphics driver, including <code>amdfendr.sys</code>.</p>
             </article>
             <article class="work-card">
-              <p class="work-index" aria-hidden="true">02</p>
               <h3>Multi-agent diagnostic system</h3>
               <p>Architected an extensible multi-agent diagnostic system using retrieval-augmented generation (RAG) and tool-calling. It automates root-cause analysis, generates high-fidelity debug reports, and provides real-time code-fix suggestions. Spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings.</p>
             </article>
             <article class="work-card">
-              <p class="work-index" aria-hidden="true">03</p>
               <h3>Microsoft collaboration at GDC 2026</h3>
               <p>Collaborated with Microsoft on new developer tool features for Windows as part of GDC 2026.</p>
-              <p class="work-link"><a class="text-link" href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">GPUOpen write-up<span class="sr-only"> (opens in a new tab)</span></a></p>
+              <p class="work-link"><a class="text-link" href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">Learn more on GPUOpen<span class="sr-only"> (opens in a new tab)</span></a></p>
             </article>
           </div>
         </div>
@@ -236,10 +205,7 @@
 
       <section id="patent" class="section" aria-labelledby="patent-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">04</span>
-            <h2 id="patent-heading">Patent</h2>
-          </div>
+          <h2 id="patent-heading">Patent</h2>
           <article class="patent">
             <p class="patent-id">US11994939B2</p>
             <h3>Systems and methods for generating remedy recommendations for power and performance issues within semiconductor software and hardware</h3>
@@ -251,10 +217,7 @@
 
       <section id="skills" class="section" aria-labelledby="skills-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">05</span>
-            <h2 id="skills-heading">Skills</h2>
-          </div>
+          <h2 id="skills-heading">Skills</h2>
           <ul class="skills" role="list">
             <li>C</li>
             <li>Windows driver development</li>
@@ -267,10 +230,7 @@
 
       <section id="education" class="section" aria-labelledby="education-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">06</span>
-            <h2 id="education-heading">Education</h2>
-          </div>
+          <h2 id="education-heading">Education</h2>
           <dl class="spec">
             <div>
               <dt>School</dt>
@@ -290,10 +250,7 @@
 
       <section id="contact" class="section" aria-labelledby="contact-heading">
         <div class="wrap">
-          <div class="section-heading">
-            <span class="section-index" aria-hidden="true">07</span>
-            <h2 id="contact-heading">Contact</h2>
-          </div>
+          <h2 id="contact-heading">Contact</h2>
           <p class="lede">Best reached on LinkedIn or GitHub.</p>
           <ul class="contact-list" role="list">
             <li>
