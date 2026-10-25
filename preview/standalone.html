@@ -480,77 +480,45 @@ h3 {
   margin-top: 1.1rem;
 }
 
-.roles {
-  display: flex;
-  flex-direction: column;
+.timeline {
+  margin-top: 0.25rem;
 }
 
-.role {
-  padding-bottom: 2.15rem;
-  margin-bottom: 2.15rem;
+.timeline > li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline > li:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.role:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.role-head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.85rem 2rem;
-}
-
-.role-org {
-  font-family: var(--serif);
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.role-place {
-  margin-top: 0.28rem;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.role h3 {
-  font-size: clamp(1.55rem, 2.4vw, 2rem);
-}
-
 .when {
-  margin-top: 0.4rem;
-  color: var(--brass);
+  color: var(--muted);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
 }
 
-.promotion {
-  margin-top: 1.05rem;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--accent);
-  max-width: 68ch;
-  color: var(--ink);
-  font-family: var(--sans);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.0625rem;
-  line-height: 1.6;
+.timeline h3 {
+  font-size: 1.45rem;
+}
+
+.where {
+  margin-top: 0.2rem;
+  font-weight: 700;
 }
 
 .role-note {
-  margin-top: 0.95rem;
+  margin-top: 0.25rem;
   color: var(--muted);
-  font-weight: 600;
 }
 
 .role-list {
-  margin-top: 1.15rem;
+  margin-top: 0.8rem;
   max-width: 68ch;
 }
 
@@ -783,10 +751,13 @@ h3 {
     background: var(--brass);
     vertical-align: 0.08em;
   }
+}
 
-  .role-where {
-    padding-top: 0.4rem;
-    text-align: right;
+@media (min-width: 800px) {
+  .timeline > li {
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+    gap: 0.4rem 2rem;
+    padding: 1.6rem 0;
   }
 }
 
@@ -847,7 +818,6 @@ h3 {
   body,
   .site-header,
   .work-card,
-  .role,
   .skills li,
   .patent,
   .contact-list a,
@@ -983,46 +953,44 @@ h3 {
       <section id="experience" class="section" aria-labelledby="experience-heading">
         <div class="wrap">
           <h2 id="experience-heading">Experience</h2>
-          <div class="roles">
-            <article class="role">
-              <header class="role-head">
-                <div class="role-title">
-                  <h3>Senior Software Developer</h3>
-                  <p class="when"><time datetime="2025-07">Jul 2025</time> to Present</p>
-                </div>
-                <div class="role-where">
-                  <p class="role-org">AMD</p>
-                  <p class="role-place">Markham, Ontario, Canada</p>
-                </div>
-              </header>
-              <p class="promotion">Promoted from Software Development Engineer 2, <time datetime="2023-06">Jun 2023</time> to <time datetime="2025-07">Jul 2025</time>.</p>
-              <ul class="role-list" role="list">
-                <li>Architected an extensible multi-agent diagnostic system using RAG and tool-calling to automate root-cause analysis, generate high-fidelity debug reports, and provide real-time code-fix suggestions.</li>
-                <li>Spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings.</li>
-                <li>Led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender.</li>
-                <li>Collaborated with Microsoft on new developer tool features for Windows as part of <a href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">GDC 2026</a><span class="sr-only"> (opens in a new tab)</span>.</li>
-              </ul>
-            </article>
-            <article class="role">
-              <header class="role-head">
-                <div class="role-title">
-                  <h3>Software Developer, PEY Co-op</h3>
-                  <p class="when"><time datetime="2021-05">May 2021</time> to <time datetime="2022-08">Aug 2022</time></p>
-                </div>
-                <div class="role-where">
-                  <p class="role-org">AMD</p>
-                </div>
-              </header>
-              <p class="role-note">16-month Professional Experience Year co-op</p>
-              <ul class="role-list" role="list">
-                <li>Led development of new debugging tools used by OEMs (original equipment manufacturers) to interact with the AMDLog driver.</li>
-                <li>Integrated features with internal crash telemetry data, increasing accuracy by up to 80%.</li>
-                <li>Resolved complex issues in the kernel-mode graphics driver on the Fault Management team.</li>
-                <li>Managed critical testing infrastructure.</li>
-                <li>One US patent filing.</li>
-              </ul>
-            </article>
-          </div>
+          <p class="lede">Roles at AMD, most recent first.</p>
+          <ol class="timeline" role="list">
+            <li>
+              <p class="when"><time datetime="2025-07">Jul 2025</time> to Present</p>
+              <article>
+                <h3>Senior Software Developer</h3>
+                <p class="where">AMD, Markham, Ontario, Canada</p>
+                <ul class="role-list" role="list">
+                  <li>Architected an extensible multi-agent diagnostic system using RAG and tool-calling to automate root-cause analysis, generate high-fidelity debug reports, and provide real-time code-fix suggestions.</li>
+                  <li>Spearheaded AI workflow adoption across engineering units, reducing mean time to resolution and generating $2M in annual savings.</li>
+                  <li>Led a team to re-architect AMD crash dumps and drove key driver stability improvements for AMD Crash Defender.</li>
+                  <li>Collaborated with Microsoft on new developer tool features for Windows as part of <a href="https://gpuopen.com/learn/amd-microsoft-gdc-2026/" target="_blank" rel="noopener noreferrer">GDC 2026</a><span class="sr-only"> (opens in a new tab)</span>.</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <p class="when"><time datetime="2023-06">Jun 2023</time> to <time datetime="2025-07">Jul 2025</time></p>
+              <article>
+                <h3>Software Development Engineer 2</h3>
+                <p class="where">AMD</p>
+              </article>
+            </li>
+            <li>
+              <p class="when"><time datetime="2021-05">May 2021</time> to <time datetime="2022-08">Aug 2022</time></p>
+              <article>
+                <h3>Software Developer, PEY Co-op</h3>
+                <p class="where">AMD</p>
+                <p class="role-note">16-month Professional Experience Year co-op</p>
+                <ul class="role-list" role="list">
+                  <li>Led development of new debugging tools used by OEMs (original equipment manufacturers) to interact with the AMDLog driver.</li>
+                  <li>Integrated features with internal crash telemetry data, increasing accuracy by up to 80%.</li>
+                  <li>Resolved complex issues in the kernel-mode graphics driver on the Fault Management team.</li>
+                  <li>Managed critical testing infrastructure.</li>
+                  <li>One US patent filing.</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
         </div>
       </section>
 
